@@ -13,18 +13,18 @@ builder.Services.AddControllers();
 //{
 //    c.SwaggerDoc("v1", new() { Title = "TodoApi", Version = "v1" });
 //});
-builder.Services.AddDbContext<TodoContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("todoDB")));
+builder.Services.AddDbContext<TodoApi.Data.todoDBContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("TODO")));
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (builder.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-    //app.UseSwagger();
-    //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApi v1"));
-}
+//if (builder.Environment.IsDevelopment())
+//{
+
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
