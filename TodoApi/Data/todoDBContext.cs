@@ -19,37 +19,10 @@ namespace TodoApi.Data
         {
         }
 
-        public virtual DbSet<Anhlt> Anhlts { get; set; }
         public virtual DbSet<Persons> PersonList { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Anhlt>(entity =>
-            {
-                entity.HasKey(e => e.PersonId);
-
-                entity.ToTable("Anhlt");
-
-                entity.Property(e => e.PersonId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("PersonID");
-
-                entity.Property(e => e.Address)
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.City)
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.FirstName)
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.LastName)
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-            });
 
             modelBuilder.Entity<Persons>(entity =>
             {
