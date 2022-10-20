@@ -1,4 +1,3 @@
-global using TodoApi.Services.UserService;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -14,8 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddScoped<TodoApi.Services.UserService.IUserService1, UserService>();
-builder.Services.AddHttpContextAccessor();
+//builder.Services.AddScoped<TodoApi.Services.UserService.IUserService1, UserService>();
+//builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddSwaggerGen(options =>
 {

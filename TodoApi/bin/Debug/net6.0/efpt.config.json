@@ -13,16 +13,20 @@
    "Schemas": null,
    "SelectedHandlebarsLanguage": 0,
    "SelectedToBeGenerated": 0,
-   "Tables": [
-      {
-         "Name": "[dbo].[Anhlt]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Persons]",
-         "ObjectType": 0
-      }
-   ],
+    "Tables": [
+        {
+            "Name": "[dbo].[Persons]",
+            "ObjectType": 0
+        },
+        {
+            "Name": "[dbo].[ApiUsers]",
+            "ObjectType": 0
+        },
+        {
+            "Name": "[dbo].[TodoItems]",
+            "ObjectType": 0
+        }
+    ],
    "UiHint": "2936112d1654.todoDB",
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
